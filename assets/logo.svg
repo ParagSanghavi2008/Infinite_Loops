@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 38" fill="none">
+  <!-- Monogram Box matching Gradium's sleek rounded bordered mark -->
+  <rect x="1" y="2" width="34" height="34" rx="8" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.16)" stroke-width="1.2"/>
+  
+  <!-- Clean Symmetrical Infinity Mark inside box -->
+  <path d="M11 19 C11 15.5 14 13.5 17 13.5 C20 13.5 22.5 16 24.5 19 C22.5 22 20 24.5 17 24.5 C14 24.5 11 22.5 11 19 Z M24.5 19 C26.5 16 29 13.5 32 13.5 C35 13.5 38 15.5 38 19 C38 22.5 35 24.5 32 24.5 C29 24.5 26.5 22 24.5 19 Z" 
+        stroke="url(#infinity-stroke-grad)" 
+        stroke-width="2.2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        fill="none"
+        transform="translate(-7, 0)"/>
+
+  <!-- Brand Typography -->
+  <text x="46" y="24" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="14.5" font-weight="700" letter-spacing="-0.02em" fill="#ffffff">
+    Infinite<tspan fill="#94a3b8" font-weight="400">Loop</tspan>
+  </text>
+
+  <defs>
+    <linearGradient id="infinity-stroke-grad" x1="11" y1="13.5" x2="38" y2="24.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="50%" stop-color="#38ef7d"/>
+      <stop offset="100%" stop-color="#4facfe"/>
+    </linearGradient>
+  </defs>
+</svg>
