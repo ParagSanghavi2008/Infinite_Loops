@@ -1,0 +1,200 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Live Analysis Bar & WebSocket UI Styles
+   Infinite Loop – Backend Integration UI Component
+   ─────────────────────────────────────────────────────────────────────────────*/
+
+/* ── Floating status bar sitting between hero and AURA section ─────────────── */
+.live-analysis-bar {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  margin: 0 auto 0;
+  padding: 0 24px 32px;
+}
+
+.live-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px;
+  background: rgba(15, 18, 26, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── Status group ───────────────────────────────────────────────────────────── */
+.live-status-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Animated live dot */
+.live-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #555;
+  flex-shrink: 0;
+  transition: background 0.4s;
+}
+.live-dot.active {
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.7);
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.55; transform: scale(0.75); }
+}
+
+/* Status badge */
+.ws-status-badge {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ws-status-info  { color: rgba(255,255,255,0.45); }
+.ws-status-ok    { color: #10b981; }
+.ws-status-warn  { color: #facc15; }
+.ws-status-error { color: #ef4444; }
+
+/* ── Start/Stop button ─────────────────────────────────────────────────────── */
+.btn-live-analysis {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #07080b;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-sans, 'Space Grotesk', sans-serif);
+  font-size: 0.80rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  flex-shrink: 0;
+}
+.btn-live-analysis:hover {
+  background: #e5e7eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(255,255,255,0.15);
+}
+.btn-live-analysis:active {
+  transform: translateY(0);
+}
+.btn-live-analysis.btn-stop {
+  background: #ef4444;
+  color: #fff;
+}
+.btn-live-analysis.btn-stop:hover {
+  background: #dc2626;
+}
+
+/* ── Expandable live signal panel ──────────────────────────────────────────── */
+.live-analysis-panel {
+  margin-top: 12px;
+  padding: 20px 24px;
+  background: rgba(10, 12, 18, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  backdrop-filter: blur(16px);
+  animation: slide-down 0.25s ease;
+}
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.live-panel-header {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding-bottom: 8px;
+}
+
+/* ── Stat rows inside the panel ────────────────────────────────────────────── */
+.live-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.live-stat-row:last-child { border-bottom: none; }
+
+.live-stat-label {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.42);
+  letter-spacing: 0.03em;
+}
+
+.live-stat-val {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.live-divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  margin: 12px 0;
+}
+
+/* Transcript row */
+.live-transcript-row {
+  padding: 6px 0;
+}
+.live-transcript-text {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-sans, 'Space Grotesk', sans-serif);
+  font-size: 0.80rem;
+  color: rgba(255,255,255,0.65);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Triggers row */
+.live-triggers-row {
+  padding: 6px 0;
+}
+.live-triggers-list {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.74rem;
+  color: #ef4444;
+  letter-spacing: 0.03em;
+}
+
+/* ── Mobile tweaks ─────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .live-bar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .btn-live-analysis {
+    width: 100%;
+    justify-content: center;
+  }
+}
