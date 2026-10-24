@@ -19,6 +19,9 @@ AI can clone a person's voice from just a few seconds of audio. Scammers use thi
 - Warning before sensitive actions
 
 ## Tech Stack
+•⁠  ⁠*Frontend:* HTML, CSS, JavaScript (live mic capture, risk meter, warning alerts)
+•⁠  ⁠*Voice analysis:* AASIST and RawNet2 anti-spoofing models to detect AI-generated or cloned voices, plus Whisper for speech-to-text
+•⁠  ⁠*Conversation analysis:* LLM running on Groq for fast scam-intent detection, combined with the voice score into one explainable risk score
 
 
 ## Limitations
