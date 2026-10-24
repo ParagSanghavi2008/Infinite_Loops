@@ -43,38 +43,49 @@
           </div>
           <h1 class="section-title">THE AURA SCORE &amp; RISK LEVEL MATRIX</h1>
           <p class="section-desc">
-            AURA (Adaptive Unified Risk Assessment) fuses acoustic spectral probability, prosodic biological entropy, and speaker identity consistency into an authoritative 0–100 threat score.
+            AURA (Adaptive Unified Risk Assessment) delivers the final suspicion score to determine voice authenticity. It evaluates two core intelligence pillars: <strong>Voice Analysis (60%)</strong> and <strong>Conversation Analysis (40%)</strong>.
           </p>
         </div>
 
         <div class="aura-formula-card">
           <div class="formula-flow-grid">
-            <div class="weight-card weight-card-1">
-              <div class="weight-header"><span class="weight-var">w₁ = 50%</span></div>
-              <p class="weight-title">Spectral &amp; Vocoder Artifact Score</p>
+            <div class="weight-card">
+              <div class="weight-header">
+                <span class="weight-var">w₁ = 60%</span>
+                <span class="factor-tag">Voice Authenticity</span>
+              </div>
+              <h3 class="weight-title">Voice Analysis</h3>
+              <p class="weight-desc">RawNet2 &amp; AASIST neural networks check if the voice is an authentic human or an AI clone by listening for robotic pitch, breathing, and digital vocoder artifacts.</p>
             </div>
             <div class="math-operator">+</div>
-            <div class="weight-card weight-card-2">
-              <div class="weight-header"><span class="weight-var">w₂ = 35%</span></div>
-              <p class="weight-title">Prosody &amp; Biological Entropy Anomaly</p>
-            </div>
-            <div class="math-operator">+</div>
-            <div class="weight-card weight-card-3">
-              <div class="weight-header"><span class="weight-var">w₃ = 15%</span></div>
-              <p class="weight-title">Identity Spoof Risk Penalty</p>
+            <div class="weight-card">
+              <div class="weight-header">
+                <span class="weight-var">w₂ = 40%</span>
+                <span class="factor-tag">Scam &amp; Extortion Detection</span>
+              </div>
+              <h3 class="weight-title">Conversation Analysis</h3>
+              <p class="weight-desc">OpenAI Whisper transcribes the speech while AI scam detectors look for digital arrest threats, police impersonation, OTP requests, and urgency pressure.</p>
             </div>
             <div class="math-operator">=</div>
             <div class="aura-result-box">
+              <span class="aura-result-label">FINAL SUSPICION SCORE</span>
               <div class="aura-result-title">AURA™</div>
               <div class="aura-result-score" id="aura-score-display">88 / 100</div>
+              <div class="aura-verdict-indicator" id="aura-verdict-text">Verdict: Critical Suspicion (Fake/Extortion)</div>
             </div>
           </div>
 
           <div class="calculator-slider-row">
             <div class="slider-group">
-              <span class="slider-label">Simulate Threat Input:</span>
-              <input type="range" min="0" max="100" value="88" class="aura-score-slider" id="aura-score-input">
-              <span class="slider-val-readout" id="slider-val-readout">88</span>
+              <span class="slider-label">Voice Suspicion (<strong>60%</strong>):</span>
+              <input type="range" min="0" max="100" value="90" class="aura-score-slider" id="voice-score-input" aria-label="Voice Analysis Suspicion Slider">
+              <span class="slider-val-readout" id="voice-val-readout">90%</span>
+            </div>
+
+            <div class="slider-group">
+              <span class="slider-label">Convo Suspicion (<strong>40%</strong>):</span>
+              <input type="range" min="0" max="100" value="85" class="aura-score-slider" id="convo-score-input" aria-label="Conversation Analysis Suspicion Slider">
+              <span class="slider-val-readout" id="convo-val-readout">85%</span>
             </div>
           </div>
         </div>
@@ -93,14 +104,14 @@
               </svg>
             </div>
             <div class="tier-main-content">
-              <h3 class="tier-title">LOW RISK</h3>
+              <h3 class="tier-title">SAFE (LOW RISK)</h3>
               <p class="tier-explanation-text">
-                Continuous biological phonation verified. Vocal tract acoustics demonstrate organic micro-jitter (0.6%–1.2%), authentic subglottal pressure shifts, and natural room reverberation decay. Zero neural vocoder frequency cutoff detected.
+                Natural human voice verified with normal breathing and speaking rhythm. Conversation contains no signs of extortion, panic, or fraudulent demands.
               </p>
             </div>
             <div class="tier-action-pill">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Normal Interaction Permitted &bull; Passive Monitoring</span>
+              <span>Safe to Talk &bull; Normal Call Permitted</span>
             </div>
           </div>
 
@@ -116,14 +127,14 @@
               </svg>
             </div>
             <div class="tier-main-content">
-              <h3 class="tier-title">MEDIUM RISK</h3>
+              <h3 class="tier-title">CAUTION (MEDIUM RISK)</h3>
               <p class="tier-explanation-text">
-                Ambiguous acoustic entropy or atypical phase coherence observed. Often caused by aggressive VoIP noise suppression, bluetooth transcoding, or low-quality neural text-to-speech converters with mild prosodic jitter anomalies.
+                Minor synthetic distortion or unusual questions detected. Could be bad phone connection or early scam testing. Verify caller identity before sharing information.
               </p>
             </div>
             <div class="tier-action-pill">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-              <span>Ask For Additional Verification &bull; Dynamic Audio Challenge</span>
+              <span>Verify Caller &bull; Do Not Share Private Info</span>
             </div>
           </div>
 
@@ -141,12 +152,12 @@
             <div class="tier-main-content">
               <h3 class="tier-title">HIGH RISK</h3>
               <p class="tier-explanation-text">
-                Substantial indicators of synthetic speech generation. High-frequency phase discrepancies above 14kHz, unnatural speech rhythm regularity, and complete absence of glottal airflow variation. Severe warning issued to conversation participants.
+                Probable AI voice clone or high-pressure scam detected. Caller is creating artificial urgency, claiming an emergency, or demanding immediate action.
               </p>
             </div>
             <div class="tier-action-pill">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-              <span>Strong Warning Issued &bull; Supervisor Review Escalation</span>
+              <span>High Alert &bull; Hang Up &amp; Verify Number</span>
             </div>
           </div>
 
@@ -162,14 +173,14 @@
               </svg>
             </div>
             <div class="tier-main-content">
-              <h3 class="tier-title">CRITICAL THREAT</h3>
+              <h3 class="tier-title">CRITICAL SCAM THREAT</h3>
               <p class="tier-explanation-text">
-                Authoritative match for zero-shot diffusion voice cloning (ElevenLabs, XTTS, VALL-E). Acoustic spectrogram demonstrates neural vocoder phase cancellation, zero biological entropy, and deepfake injection signatures. Immediate lockout enforced.
+                Confirmed AI voice clone (RawNet2 + AASIST match) and active extortion or scam attack. Hang up immediately and dial 1930 (National Cyber Crime Helpline).
               </p>
             </div>
             <div class="tier-action-pill">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
-              <span>Mandatory 2FA &bull; Instant Session Sever &amp; Fraud Lock</span>
+              <span>Instant Call Termination &bull; Dial 1930 Cyber Helpline</span>
             </div>
           </div>
         </div>

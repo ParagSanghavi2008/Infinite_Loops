@@ -47,53 +47,121 @@
         </div>
 
         <div class="framework-four-grid">
+          <!-- Layer 01: RawNet2 -->
           <div class="framework-slot-card">
+            <svg class="card-bg-watermark" viewBox="0 0 200 200" fill="none" stroke="currentColor" aria-hidden="true">
+              <path d="M10 100 Q30 20, 50 100 T90 100 T130 100 T170 100 T190 100" stroke-width="4" stroke-linecap="round"/>
+              <path d="M10 100 Q40 60, 70 100 T130 100 T190 100" stroke-width="2" stroke-dasharray="4 4"/>
+              <circle cx="100" cy="100" r="80" stroke-width="1.5" stroke-dasharray="8 8"/>
+              <circle cx="100" cy="100" r="45" stroke-width="2"/>
+              <text x="100" y="105" text-anchor="middle" font-size="13" font-family="monospace" font-weight="bold" fill="currentColor">RAWNET2</text>
+            </svg>
             <div class="slot-corner-tl"></div><div class="slot-corner-tr"></div>
             <div class="slot-corner-bl"></div><div class="slot-corner-br"></div>
-            <div class="slot-header"><span class="slot-layer-badge">LAYER 01</span><span class="slot-status-indicator">[ READY FOR CONTENT ]</span></div>
+            <div class="slot-header"><span class="slot-layer-badge">LAYER 01</span><span class="slot-status-indicator" style="color:#34d399;">[ ACTIVE • ASVspoof 2019 ]</span></div>
             <div class="slot-center-body">
-              <div class="slot-plus-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
-              <h3 class="slot-prompt-title">Layer 01 Module</h3>
-              <p class="slot-prompt-sub">Leave this slot free for custom detection framework content</p>
+              <div class="slot-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10v3M6 6v11M10 3v18M14 8v7M18 5v13M22 10v3"/></svg>
+              </div>
+              <h3 class="slot-prompt-title">RawNet2 Neural Waveform Detector</h3>
+              <p class="slot-prompt-sub">Direct time-domain anti-spoofing engine operating on 64,000 raw audio samples. Sinc-convolution filters and Feature Map Scaling (FMS) expose neural vocoder phase artifacts without spectrogram loss.</p>
+              <div class="slot-tags-row">
+                <span class="slot-pill highlight">Time-Domain</span>
+                <span class="slot-pill">128 Sinc Filters</span>
+                <span class="slot-pill">FMS Scaling</span>
+                <span class="slot-pill">MPS GPU</span>
+              </div>
             </div>
-            <div class="slot-footer"><span>INPUT: ACOUSTIC STREAM</span><span>SLOT #01</span></div>
+            <div class="slot-footer"><span>INPUT: 16kHz RAW PCM</span><span>VOICE WEIGHT: 30%</span></div>
           </div>
 
+          <!-- Layer 02: AASIST -->
           <div class="framework-slot-card">
+            <svg class="card-bg-watermark" viewBox="0 0 200 200" fill="none" stroke="currentColor" aria-hidden="true">
+              <circle cx="50" cy="50" r="14" stroke-width="3"/>
+              <circle cx="150" cy="50" r="14" stroke-width="3"/>
+              <circle cx="100" cy="110" r="22" stroke-width="3"/>
+              <circle cx="40" cy="165" r="12" stroke-width="2.5"/>
+              <circle cx="160" cy="165" r="12" stroke-width="2.5"/>
+              <line x1="50" y1="50" x2="150" y2="50" stroke-width="2" stroke-dasharray="4 4"/>
+              <line x1="50" y1="50" x2="100" y2="110" stroke-width="2.5"/>
+              <line x1="150" y1="50" x2="100" y2="110" stroke-width="2.5"/>
+              <line x1="100" y1="110" x2="40" y2="165" stroke-width="2.5"/>
+              <line x1="100" y1="110" x2="160" y2="165" stroke-width="2.5"/>
+              <text x="100" y="115" text-anchor="middle" font-size="12" font-family="monospace" font-weight="bold" fill="currentColor">AASIST</text>
+            </svg>
             <div class="slot-corner-tl"></div><div class="slot-corner-tr"></div>
             <div class="slot-corner-bl"></div><div class="slot-corner-br"></div>
-            <div class="slot-header"><span class="slot-layer-badge">LAYER 02</span><span class="slot-status-indicator">[ READY FOR CONTENT ]</span></div>
+            <div class="slot-header"><span class="slot-layer-badge">LAYER 02</span><span class="slot-status-indicator" style="color:#34d399;">[ ACTIVE • NAVER CLOVA AI ]</span></div>
             <div class="slot-center-body">
-              <div class="slot-plus-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
-              <h3 class="slot-prompt-title">Layer 02 Module</h3>
-              <p class="slot-prompt-sub">Leave this slot free for custom detection framework content</p>
+              <div class="slot-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"></circle><circle cx="18" cy="6" r="3"></circle><circle cx="12" cy="18" r="3"></circle><line x1="8.5" y1="7.5" x2="10.5" y2="16.5"></line><line x1="15.5" y1="7.5" x2="13.5" y2="16.5"></line><line x1="9" y1="6" x2="15" y2="6"></line></svg>
+              </div>
+              <h3 class="slot-prompt-title">AASIST Graph Attention Network</h3>
+              <p class="slot-prompt-sub">State-of-the-art spectro-temporal graph attention network. Models interconnected spectral and temporal graph representations to uncover cross-band acoustic discontinuities in cloned speech.</p>
+              <div class="slot-tags-row">
+                <span class="slot-pill highlight">Graph Attention (GAT)</span>
+                <span class="slot-pill">Spectro-Temporal</span>
+                <span class="slot-pill">Heterogeneous Pool</span>
+              </div>
             </div>
-            <div class="slot-footer"><span>NEURAL ARTIFACT PIPELINE</span><span>SLOT #02</span></div>
+            <div class="slot-footer"><span>SPECTRO-TEMPORAL GAT</span><span>VOICE WEIGHT: 30%</span></div>
           </div>
 
+          <!-- Layer 03: Whisper Flow + Groq LLM -->
           <div class="framework-slot-card">
+            <svg class="card-bg-watermark" viewBox="0 0 200 200" fill="none" stroke="currentColor" aria-hidden="true">
+              <rect x="35" y="35" width="130" height="130" rx="24" stroke-width="3"/>
+              <circle cx="100" cy="100" r="36" stroke-width="2" stroke-dasharray="6 4"/>
+              <path d="M65 100h70M100 65v70" stroke-width="2.5"/>
+              <path d="M15 100h20M165 100h20M100 15v20M100 165v20" stroke-width="3" stroke-linecap="round"/>
+              <text x="100" y="105" text-anchor="middle" font-size="12" font-family="monospace" font-weight="bold" fill="currentColor">LLM 0.2s</text>
+            </svg>
             <div class="slot-corner-tl"></div><div class="slot-corner-tr"></div>
             <div class="slot-corner-bl"></div><div class="slot-corner-br"></div>
-            <div class="slot-header"><span class="slot-layer-badge">LAYER 03</span><span class="slot-status-indicator">[ READY FOR CONTENT ]</span></div>
+            <div class="slot-header"><span class="slot-layer-badge">LAYER 03</span><span class="slot-status-indicator" style="color:#60a5fa;">[ ACTIVE • GROQ 0.2s LLM ]</span></div>
             <div class="slot-center-body">
-              <div class="slot-plus-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
-              <h3 class="slot-prompt-title">Layer 03 Module</h3>
-              <p class="slot-prompt-sub">Leave this slot free for custom detection framework content</p>
+              <div class="slot-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <h3 class="slot-prompt-title">Whisper Flow + Groq LLM</h3>
+              <p class="slot-prompt-sub">OpenAI Whisper transcribes incoming speech in streaming chunks. Groq LPU inference (0.2s latency) conducts cognitive forensics to flag fake police calls, digital arrest threats, OTP phishing, and urgency traps.</p>
+              <div class="slot-tags-row">
+                <span class="slot-pill highlight">Whisper STT</span>
+                <span class="slot-pill">Groq LPU</span>
+                <span class="slot-pill">Scam Semantics</span>
+                <span class="slot-pill">Tactics Parser</span>
+              </div>
             </div>
-            <div class="slot-footer"><span>BIOLOGICAL ENTROPY CHECK</span><span>SLOT #03</span></div>
+            <div class="slot-footer"><span>WHISPER + GROQ INGESTION</span><span>CONVO WEIGHT: 40%</span></div>
           </div>
 
+          <!-- Layer 04: AURA Multi-Factor Core -->
           <div class="framework-slot-card">
+            <svg class="card-bg-watermark" viewBox="0 0 200 200" fill="none" stroke="currentColor" aria-hidden="true">
+              <path d="M100 20 L165 52 V112 C165 155 100 185 100 185 C100 185 35 155 35 112 V52 Z" stroke-width="3"/>
+              <path d="M75 100 C75 82 90 70 100 100 C110 130 125 118 125 100 C125 82 110 70 100 100 C90 130 75 118 75 100 Z" stroke-width="2.5" stroke-dasharray="3 3"/>
+              <text x="100" y="148" text-anchor="middle" font-size="12" font-family="monospace" font-weight="bold" fill="currentColor">1930 DISPATCH</text>
+            </svg>
             <div class="slot-corner-tl"></div><div class="slot-corner-tr"></div>
             <div class="slot-corner-bl"></div><div class="slot-corner-br"></div>
-            <div class="slot-header"><span class="slot-layer-badge">LAYER 04</span><span class="slot-status-indicator">[ READY FOR CONTENT ]</span></div>
+            <div class="slot-header"><span class="slot-layer-badge">LAYER 04</span><span class="slot-status-indicator" style="color:#ef4444;">[ ACTIVE • 1930 LOCKDOWN ]</span></div>
             <div class="slot-center-body">
-              <div class="slot-plus-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
-              <h3 class="slot-prompt-title">Layer 04 Module</h3>
-              <p class="slot-prompt-sub">Leave this slot free for custom detection framework content</p>
+              <div class="slot-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <h3 class="slot-prompt-title">AURA™ Multi-Factor Decision Core</h3>
+              <p class="slot-prompt-sub">Synthesizes Layer 1 (30%), Layer 2 (30%), and Layer 3 (40%) into a unified 0–100 threat score. If the score exceeds 80, it immediately triggers the Critical Alert Popup and dispatches the 1930 Cyber Helpline.</p>
+              <div class="slot-tags-row">
+                <span class="slot-pill highlight">60/40 Fusion</span>
+                <span class="slot-pill">Live Risk Needle</span>
+                <span class="slot-pill">1930 Helpline</span>
+                <span class="slot-pill">PDF Audit</span>
+              </div>
             </div>
-            <div class="slot-footer"><span>REAL-TIME MITIGATION / 2FA</span><span>SLOT #04</span></div>
+            <div class="slot-footer"><span>AURA DECISION CORE</span><span>FINAL SCORE: 0–100</span></div>
           </div>
+        </div>
         </div>
       </div>
     </section>

@@ -1,0 +1,10 @@
+.env
+backend/.env
+backend/venv/
+backend/__pycache__/
+backend/models/__pycache__/
+*.pyc
+.DS_Store
+
+backend/models/weights/*.pt
+backend/models/weights/*.pth
