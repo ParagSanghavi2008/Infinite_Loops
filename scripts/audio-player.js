@@ -38,13 +38,13 @@
       freq: 260
     },
     'entropy': {
-      text: "Evaluating vocal tract glottal pulse timing: High micro-jitter absence verified. Acoustic entropy conforms to synthetic recurrent speech generator. Escalating to Level 4 block.",
+      text: "Checking voice authenticity with RawNet2: Natural human breathing absent. Robotic pitch detected. High probability of AI voice cloning. Escalating to Critical Block.",
       confidence: "97.2% Critical Risk",
       voice: "Noa 🇪🇸 (VALL-E)",
       freq: 350
     },
     'biometric': {
-      text: "Incoming audio verified against biological biometric baseline: Natural pitch variation, subglottal resonance, and room reverberation confirmed authentic. Safe to connect.",
+      text: "Voice check passed: Natural human pitch, natural breathing pauses, and authentic room acoustics confirmed. No scam patterns detected. Safe to continue.",
       confidence: "99.6% Authentic Human",
       voice: "Lorena 🇩🇪 (Verified Human)",
       freq: 220

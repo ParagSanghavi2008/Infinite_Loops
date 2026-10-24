@@ -9,24 +9,24 @@
 
   const streamData = {
     'harper': {
-      text: "Acoustic anomaly score: 99.2%. Phase cancellation and micro-pitch jitter absent in natural human vocal tract. High likelihood of ElevenLabs Turbo v2 model.",
-      score: "99.2% Deepfake Anomaly"
+      text: "AI Voice Clone Detected (99.2%): Robotic voice pitch and lack of human breathing detected. Matches synthetic voice generation.",
+      score: "99.2% AI Fake"
     },
     'coralie': {
-      text: "Neural vocoder artifact detected in high-frequency spectrum (>14kHz). Formant resonance lacks natural buccal cavity reverberation.",
-      score: "94.8% Synthetic Vocoder"
+      text: "Computer Voice Detected: Digital frequency artifacts found. Voice lacks natural throat and mouth resonance.",
+      score: "94.8% Synthetic Voice"
     },
     'lorena': {
-      text: "Biological vocal tract dynamics verified. Glottal open-quotient entropy is 0.88, consistent with genuine human phonation.",
-      score: "1.2% Low Risk (Human)"
+      text: "Real Human Voice Verified: Natural voice pitch variation, breath pauses, and natural room echo confirmed authentic.",
+      score: "1.2% Safe (Real Human)"
     },
     'noa': {
-      text: "Zero-shot cloned diffusion signature flagged. Zero biological respiration cues during a 7-second continuous monologue.",
-      score: "88.7% Zero-Shot Clone"
+      text: "Cloned Voice Flagged: Zero breathing pauses during 7 seconds of continuous talking. Clear sign of an AI clone.",
+      score: "88.7% Cloned Voice"
     },
     'beatriz': {
-      text: "Acoustic prosody matches cross-language speech synthesis attack pattern. Immediate biometric alert dispatched to incident queue.",
-      score: "96.1% Neural Impersonator"
+      text: "AI Impersonation Attack: Synthetic speech rhythm detected impersonating a trusted contact. Alert sent to security.",
+      score: "96.1% AI Impersonator"
     }
   };
 
@@ -86,11 +86,11 @@
         isScanning = !isScanning;
         if (isScanning) {
           recordBtn.classList.add('active');
-          if (scannerStatus) scannerStatus.textContent = "ANALYZING ACOUSTIC SPECTRUM... [HIGH ANOMALY DETECTED]";
+          if (scannerStatus) scannerStatus.textContent = "ANALYZING VOICE FOR AI CLONING... [HIGH ANOMALY DETECTED]";
           scannerStatus.style.color = "#ff3b5c";
         } else {
           recordBtn.classList.remove('active');
-          if (scannerStatus) scannerStatus.textContent = "READY FOR LIVE STREAM INGESTION (44.1kHz)";
+          if (scannerStatus) scannerStatus.textContent = "READY FOR LIVE VOICE ANALYSIS";
           scannerStatus.style.color = "var(--text-dim)";
         }
       });
