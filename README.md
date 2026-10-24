@@ -1,4 +1,4 @@
-# 🛡️ [Project Name]: Know who's really calling
+# 🛡️ Infinite Loops
 
 An AI-powered web app that detects possible **voice-cloning scam attempts** during live or near-real-time conversations, gives an **explainable risk score**, and warns users *before* they trust suspicious instructions or approve sensitive actions.
 
