@@ -1,0 +1,330 @@
+@import url('./variables.css');
+
+/* Section: AURA Score & Risk Level Matrix (Gradium Black & White Aesthetic) */
+.aura-section {
+  position: relative;
+  padding: 120px 0 100px;
+  background: #08090c;
+  border-top: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.aura-bg-glow {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, transparent 75%);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.aura-header {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Formula Container Card - Monochrome Style */
+.aura-formula-card {
+  background: rgba(14, 16, 22, 0.9);
+  border: 1px solid var(--border-card);
+  border-radius: 20px;
+  padding: 34px 30px;
+  backdrop-filter: blur(24px);
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+  box-shadow: var(--shadow-card);
+}
+
+.formula-flow-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Weight Block - Pure Monochrome */
+.weight-card {
+  flex: 1;
+  min-width: 190px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all var(--transition-smooth);
+}
+
+.weight-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.weight-header {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.weight-var {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.weight-title {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  line-height: 1.4;
+  min-height: 42px;
+}
+
+.weight-icon {
+  align-self: flex-start;
+  margin-top: 4px;
+  color: #94a3b8;
+}
+
+.math-operator {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 300;
+  user-select: none;
+}
+
+/* Result AURA Box - Crisp White on Black */
+.aura-result-box {
+  flex: 1.2;
+  min-width: 220px;
+  background: #000000;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.12);
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.aura-result-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.aura-result-score {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  color: #e2e8f0;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+/* Interactive Slider - Monochrome */
+.calculator-slider-row {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.slider-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 260px;
+}
+
+.slider-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.aura-score-slider {
+  flex: 1;
+  -webkit-appearance: none;
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  outline: none;
+}
+
+.aura-score-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.8);
+}
+
+.slider-val-readout {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  min-width: 32px;
+}
+
+/* 2x2 Risk Tiers Grid - Gradium Aesthetic with Loop Design */
+.risk-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  position: relative;
+  z-index: 2;
+}
+
+.risk-card {
+  background: rgba(14, 16, 22, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 34px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+  backdrop-filter: blur(24px);
+  position: relative;
+  min-height: 290px;
+  transition: all var(--transition-smooth);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+/* Embedded Particle Loop Design in Grids (matches Image 3) */
+.risk-card::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.card-loop-bg-pattern {
+  position: absolute;
+  right: -10px;
+  bottom: -15px;
+  width: 180px;
+  height: 140px;
+  opacity: 0.28;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+.risk-card:hover .card-loop-bg-pattern {
+  opacity: 0.55;
+  transform: scale(1.05);
+}
+
+.risk-card:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-4px);
+}
+
+.risk-card.active-tier {
+  border-color: rgba(255, 255, 255, 0.85);
+  background: rgba(18, 22, 30, 0.95);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.15), 0 20px 40px rgba(0, 0, 0, 0.8);
+  transform: translateY(-4px);
+}
+
+.tier-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.tier-score-pill {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.tier-icon {
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+.tier-main-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tier-title {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.tier-explanation-text {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  line-height: 1.65;
+}
+
+.tier-action-pill {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 0.86rem;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .risk-tiers-grid {
+    grid-template-columns: 1fr;
+  }
+}

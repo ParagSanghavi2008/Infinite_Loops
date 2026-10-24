@@ -1,0 +1,193 @@
+@import url('./variables.css');
+
+/* Section: The Multi-Layer Detection Framework (Gradium Monochrome Style) */
+.framework-section {
+  position: relative;
+  padding: 120px 0 100px;
+  background: #08090c;
+  border-top: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.framework-header {
+  text-align: center;
+  margin-bottom: 55px;
+  position: relative;
+  z-index: 2;
+}
+
+.framework-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  max-width: 900px;
+  margin: 0 auto 18px;
+}
+
+.framework-desc {
+  font-size: 1.05rem;
+  color: var(--text-silver);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* 4 Square Grid (2x2) Left Free For User Content */
+.framework-four-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  max-width: 1050px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.framework-slot-card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  min-height: 320px;
+  background: rgba(14, 16, 22, 0.7);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(20px);
+  transition: all var(--transition-smooth);
+  overflow: hidden;
+}
+
+.framework-slot-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.framework-slot-card:hover {
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(18, 22, 30, 0.9);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Corner Reticle Accents */
+.slot-corner-tl, .slot-corner-tr, .slot-corner-bl, .slot-corner-br {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+}
+.slot-corner-tl { top: 12px; left: 12px; border-top: 1.5px solid; border-left: 1.5px solid; }
+.slot-corner-tr { top: 12px; right: 12px; border-top: 1.5px solid; border-right: 1.5px solid; }
+.slot-corner-bl { bottom: 12px; left: 12px; border-bottom: 1.5px solid; border-left: 1.5px solid; }
+.slot-corner-br { bottom: 12px; right: 12px; border-bottom: 1.5px solid; border-right: 1.5px solid; }
+
+.slot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.slot-layer-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 4px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.slot-status-indicator {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.slot-center-body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.slot-plus-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.framework-slot-card:hover .slot-plus-icon {
+  border-color: #ffffff;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(90deg);
+}
+
+.slot-prompt-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.slot-prompt-sub {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  max-width: 260px;
+  line-height: 1.5;
+}
+
+.slot-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+}
+
+@media (max-width: 768px) {
+  .framework-four-grid {
+    grid-template-columns: 1fr;
+  }
+  .framework-slot-card {
+    aspect-ratio: auto;
+    min-height: 260px;
+  }
+}

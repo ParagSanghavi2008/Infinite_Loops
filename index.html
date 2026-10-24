@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Infinite Loop | Real-Time Voice Cloning Impersonation Detection & Defense</title>
+  <meta name="description" content="AI-powered real-time detection & prevention of voice cloning impersonation attacks, neural vocoder anomalies, and zero-shot synthetic audio.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+
+  <!-- Core & Component Styles -->
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/aura-matrix.css">
+  <link rel="stylesheet" href="styles/threats.css">
+  <link rel="stylesheet" href="styles/framework.css">
+  <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+
+  <!-- Ambient Grid Background -->
+  <div class="bg-ambient-grid" aria-hidden="true"></div>
+  <div class="ambient-glow-top" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar (Gradium Monochrome Style) -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a href="#" class="brand-wrapper" aria-label="Infinite Loop Home">
+          <img src="assets/logo.svg" alt="Infinite Loop Logo" class="brand-logo-img">
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#aura-matrix" class="nav-link">AURA Matrix</a></li>
+          <li><a href="#threats" class="nav-link">Threat Vectors</a></li>
+          <li><a href="#framework" class="nav-link">Framework</a></li>
+          <li><a href="#footer" class="nav-link">Resources</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="mailto:contact@infiniteloop.ai" class="btn-nav-talk">Talk to us</a>
+          <a href="#aura-matrix" class="btn-nav-signin">Sign in</a>
+          <button class="mobile-burger" aria-label="Toggle navigation">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============================================================ -->
+    <!-- SECTION 1: HERO / ENTRANCE (Image 1 Style)                   -->
+    <!-- "Hear the fake" / "before you trust it." + Constant Loop     -->
+    <!-- ============================================================ -->
+    <section class="hero-section" id="hero">
+      <!-- 3D Particle Canvas Background - Constant at one place -->
+      <div class="hero-canvas-container">
+        <canvas id="infinity-particles-canvas"></canvas>
+      </div>
+
+      <!-- Giant Typography - Overlapping loop naturally & properly fitted -->
+      <div class="hero-giant-typography" aria-hidden="true">
+        <h1 class="giant-text-row giant-text-top">Hear the fake</h1>
+        <div class="giant-text-row giant-text-bottom">before you trust it.</div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================ -->
+    <!-- SECTION 2: THE AURA SCORE & RISK LEVEL MATRIX (Image 5)      -->
+    <!-- Monochrome 2x2 Grid with Embedded Loop Design                -->
+    <!-- ============================================================ -->
+    <section class="aura-section" id="aura-matrix">
+      <div class="aura-bg-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="aura-header">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>UNIFIED ASSESSMENT</span>
+          </div>
+          <h2 class="section-title">THE AURA SCORE &amp; RISK LEVEL MATRIX</h2>
+          <p class="section-desc">
+            AURA (Adaptive Unified Risk Assessment) fuses acoustic spectral probability, prosodic biological entropy, and speaker identity consistency into an authoritative 0–100 threat score.
+          </p>
+        </div>
+
+        <!-- Formula Flow Card -->
+        <div class="aura-formula-card">
+          <div class="formula-flow-grid">
+            <!-- Weight 1 -->
+            <div class="weight-card weight-card-1">
+              <div class="weight-header">
+                <span class="weight-var">w₁ = 50%</span>
+              </div>
+              <p class="weight-title">Spectral &amp; Vocoder Artifact Score</p>
+              <div class="weight-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M2 10v3M6 6v11M10 3v18M14 8v7M18 5v13M22 10v3"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="math-operator">+</div>
+
+            <!-- Weight 2 -->
+            <div class="weight-card weight-card-2">
+              <div class="weight-header">
+                <span class="weight-var">w₂ = 35%</span>
+              </div>
+              <p class="weight-title">Prosody &amp; Biological Entropy Anomaly</p>
+              <div class="weight-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <div class="math-operator">+</div>
+
+            <!-- Weight 3 -->
+            <div class="weight-card weight-card-3">
+              <div class="weight-header">
+                <span class="weight-var">w₃ = 15%</span>
+              </div>
+              <p class="weight-title">Identity Spoof Risk Penalty</p>
+              <div class="weight-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+            </div>
+
+            <div class="math-operator">=</div>
+
+            <!-- Result Box -->
+            <div class="aura-result-box">
+              <div class="aura-result-title">AURA™</div>
+              <div class="aura-result-score" id="aura-score-display">88 / 100</div>
+            </div>
+          </div>
+
+          <!-- Interactive Risk Calibration Slider -->
+          <div class="calculator-slider-row">
+            <div class="slider-group">
+              <span class="slider-label">Simulate Threat Input:</span>
+              <input type="range" min="0" max="100" value="88" class="aura-score-slider" id="aura-score-input">
+              <span class="slider-val-readout" id="slider-val-readout">88</span>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">
+              REAL-TIME RISK ENGINE ACTIVE
+            </span>
+          </div>
+        </div>
+
+        <!-- 2x2 Risk Level Matrix Grid with Explanatory Text & Embedded Loop Design -->
+        <div class="risk-tiers-grid">
+          <!-- 0 - 30 LOW RISK -->
+          <div class="risk-card risk-card-low">
+            <!-- Embedded Loop Design in Grid Card (Image 3) -->
+            <svg class="card-loop-bg-pattern" viewBox="0 0 160 120" fill="none" aria-hidden="true">
+              <path d="M30 60 C30 35 55 20 80 60 C105 100 130 85 130 60 C130 35 105 20 80 60 C55 100 30 85 30 60 Z" stroke="rgba(255,255,255,0.22)" stroke-width="5" stroke-dasharray="2 4" stroke-linecap="round"/>
+              <path d="M35 60 C35 38 58 25 80 60 C102 95 125 82 125 60 C125 38 102 25 80 60 C58 95 35 82 35 60 Z" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="1 3"/>
+            </svg>
+
+            <div class="tier-top-row">
+              <span class="tier-score-pill">0 - 30</span>
+              <svg class="tier-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            
+            <div class="tier-main-content">
+              <h3 class="tier-title">LOW RISK</h3>
+              <p class="tier-explanation-text">
+                Continuous biological phonation verified. Vocal tract acoustics demonstrate organic micro-jitter (0.6%–1.2%), authentic subglottal pressure shifts, and natural room reverberation decay. Zero neural vocoder frequency cutoff detected.
+              </p>
+            </div>
+
+            <div class="tier-action-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Normal Interaction Permitted &bull; Passive Monitoring</span>
+            </div>
+          </div>
+
+          <!-- 31 - 60 MEDIUM RISK -->
+          <div class="risk-card risk-card-medium">
+            <svg class="card-loop-bg-pattern" viewBox="0 0 160 120" fill="none" aria-hidden="true">
+              <path d="M30 60 C30 35 55 20 80 60 C105 100 130 85 130 60 C130 35 105 20 80 60 C55 100 30 85 30 60 Z" stroke="rgba(255,255,255,0.22)" stroke-width="5" stroke-dasharray="2 4" stroke-linecap="round"/>
+              <path d="M35 60 C35 38 58 25 80 60 C102 95 125 82 125 60 C125 38 102 25 80 60 C58 95 35 82 35 60 Z" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="1 3"/>
+            </svg>
+
+            <div class="tier-top-row">
+              <span class="tier-score-pill">31 - 60</span>
+              <svg class="tier-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            
+            <div class="tier-main-content">
+              <h3 class="tier-title">MEDIUM RISK</h3>
+              <p class="tier-explanation-text">
+                Ambiguous acoustic entropy or atypical phase coherence observed. Often caused by aggressive VoIP noise suppression, bluetooth transcoding, or low-quality neural text-to-speech converters with mild prosodic jitter anomalies.
+              </p>
+            </div>
+
+            <div class="tier-action-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <span>Ask For Additional Verification &bull; Dynamic Audio Challenge</span>
+            </div>
+          </div>
+
+          <!-- 61 - 80 HIGH RISK -->
+          <div class="risk-card risk-card-high">
+            <svg class="card-loop-bg-pattern" viewBox="0 0 160 120" fill="none" aria-hidden="true">
+              <path d="M30 60 C30 35 55 20 80 60 C105 100 130 85 130 60 C130 35 105 20 80 60 C55 100 30 85 30 60 Z" stroke="rgba(255,255,255,0.22)" stroke-width="5" stroke-dasharray="2 4" stroke-linecap="round"/>
+              <path d="M35 60 C35 38 58 25 80 60 C102 95 125 82 125 60 C125 38 102 25 80 60 C58 95 35 82 35 60 Z" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="1 3"/>
+            </svg>
+
+            <div class="tier-top-row">
+              <span class="tier-score-pill">61 - 80</span>
+              <svg class="tier-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            
+            <div class="tier-main-content">
+              <h3 class="tier-title">HIGH RISK</h3>
+              <p class="tier-explanation-text">
+                Substantial indicators of synthetic speech generation. High-frequency phase discrepancies above 14kHz, unnatural speech rhythm regularity, and complete absence of glottal airflow variation. Severe warning issued to conversation participants.
+              </p>
+            </div>
+
+            <div class="tier-action-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              <span>Strong Warning Issued &bull; Supervisor Review Escalation</span>
+            </div>
+          </div>
+
+          <!-- 81 - 100 CRITICAL -->
+          <div class="risk-card risk-card-critical active-tier">
+            <svg class="card-loop-bg-pattern" viewBox="0 0 160 120" fill="none" aria-hidden="true">
+              <path d="M30 60 C30 35 55 20 80 60 C105 100 130 85 130 60 C130 35 105 20 80 60 C55 100 30 85 30 60 Z" stroke="rgba(255,255,255,0.22)" stroke-width="5" stroke-dasharray="2 4" stroke-linecap="round"/>
+              <path d="M35 60 C35 38 58 25 80 60 C102 95 125 82 125 60 C125 38 102 25 80 60 C58 95 35 82 35 60 Z" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="1 3"/>
+            </svg>
+
+            <div class="tier-top-row">
+              <span class="tier-score-pill">81 - 100</span>
+              <svg class="tier-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+              </svg>
+            </div>
+            
+            <div class="tier-main-content">
+              <h3 class="tier-title">CRITICAL THREAT</h3>
+              <p class="tier-explanation-text">
+                Authoritative match for zero-shot diffusion voice cloning (ElevenLabs, XTTS, VALL-E). Acoustic spectrogram demonstrates neural vocoder phase cancellation, zero biological entropy, and deepfake injection signatures. Immediate lockout enforced.
+              </p>
+            </div>
+
+            <div class="tier-action-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+              <span>Mandatory 2FA &bull; Instant Session Sever &amp; Fraud Lock</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================ -->
+    <!-- SECTION 3: THE PROBLEM STATEMENT                             -->
+    <!-- "THE RISE OF ASYMMETRIC AI VOICE IMPERSONATION" (2x2 Grid)   -->
+    <!-- ============================================================ -->
+    <section class="threats-section" id="threats">
+      <div class="container">
+        <div class="threats-header">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>THE PROBLEM STATEMENT</span>
+          </div>
+          <h2 class="threats-title">THE RISE OF ASYMMETRIC AI VOICE IMPERSONATION</h2>
+          <p class="threats-desc">
+            With modern Zero-Shot Diffusion &amp; Neural Vocoders (ElevenLabs, XTTS, VALL-E), cybercriminals clone high-fidelity voices from just <strong>3 seconds</strong> of social media audio, weaponizing trust to execute devastating attacks.
+          </p>
+        </div>
+
+        <div class="threats-grid">
+          <!-- Card 1: Vishing & Digital Arrest Scams -->
+          <div class="threat-card">
+            <svg class="card-loop-bg-pattern" viewBox="0 0 160 120" fill="none" aria-hidden="true">
+              <path d="M30 60 C30 35 55 20 80 60 C105 100 130 85 130 60 C130 35 105 20 80 60 C55 100 30 85 30 60 Z" stroke="rgba(255,255,255,0.22)" stroke-width="5" stroke-dasharray="2 4" stroke-linecap="round"/>
+              <path d="M35 60 C35 38 58 25 80 60 C102 95 125 82 125 60 C125 38 102 25 80 60 C58 95 35 82 35 60 Z" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="1 3"/>
+            </svg>
+
+            <div>
+              <div class="threat-card-top">
+                <span class="threat-badge">CRITICAL THREAT</span>
+                <div class="threat-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    <path d="M14.05 2a9 9 0 0 1 7.95 7.95"></path>
+                    <path d="M14.05 6A5 5 0 0 1 18 10"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="threat-heading">Vishing &amp; Digital Arrest Scams</h3>
+              <p class="threat-text">
+                Impersonating law enforcement, customs, and CBI officers with artificial urgency, intimidation, and cloned authoritative voices to extort millions under fabricated "Digital Arrest" warrants.
+              </p>
+            </div>
+            <div class="threat-stat-row">
+              <span class="threat-stat-big">30%</span>
+              <span class="threat-stat-label">Of all voice clone extortion incidents in India</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Fake Kidnapping & Medical Distress -->
+          <div class="threat-card">
+            <svg class="card-loop-bg-pattern" viewBox="0 0 160 120" fill="none" aria-hidden="true">
+              <path d="M30 60 C30 35 55 20 80 60 C105 100 130 85 130 60 C130 35 105 20 80 60 C55 100 30 85 30 60 Z" stroke="rgba(255,255,255,0.22)" stroke-width="5" stroke-dasharray="2 4" stroke-linecap="round"/>
+              <path d="M35 60 C35 38 58 25 80 60 C102 95 125 82 125 60 C125 38 102 25 80 60 C58 95 35 82 35 60 Z" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="1 3"/>
+            </svg>
+
+            <div>
+              <div class="threat-card-top">
+                <span class="threat-badge">EMOTIONAL EXTORTION</span>
+                <div class="threat-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                    <path d="m12 5-1 5 3 2-2 5"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="threat-heading">Fake Kidnapping &amp; Medical Distress</h3>
+              <p class="threat-text">
+                Simulating panic-stricken voices of family members crying in staged accidents or hospital emergencies, exploiting biological parental instinct before victims can verify authenticity.
+              </p>
+            </div>
+            <div class="threat-stat-row">
+              <span class="threat-stat-big">55%</span>
+              <span class="threat-stat-label">The dominant vector targeting families</span>
+            </div>
+          </div>
+
+          <!-- Card 3: CEO Fraud & Banking KYC Scams -->
+          <div class="threat-card">
+            <svg class="card-loop-bg-pattern" viewBox="0 0 160 120" fill="none" aria-hidden="true">
+              <path d="M30 60 C30 35 55 20 80 60 C105 100 130 85 130 60 C130 35 105 20 80 60 C55 100 30 85 30 60 Z" stroke="rgba(255,255,255,0.22)" stroke-width="5" stroke-dasharray="2 4" stroke-linecap="round"/>
+              <path d="M35 60 C35 38 58 25 80 60 C102 95 125 82 125 60 C125 38 102 25 80 60 C58 95 35 82 35 60 Z" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="1 3"/>
+            </svg>
+
+            <div>
+              <div class="threat-card-top">
+                <span class="threat-badge">ENTERPRISE ATTACK</span>
+                <div class="threat-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="threat-heading">CEO Fraud &amp; Banking KYC Scams</h3>
+              <p class="threat-text">
+                Cloning executives to authorize urgent wire transfers or spoofing bank managers claiming blocked KYC/ATM cards, bypassing traditional voice biometrics that only measure similarity.
+              </p>
+            </div>
+            <div class="threat-stat-row">
+              <span class="threat-stat-big">15%</span>
+              <span class="threat-stat-label">High-value enterprise &amp; retail banking fraud</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Synthetic Biometric & IVR Bypass -->
+          <div class="threat-card">
+            <svg class="card-loop-bg-pattern" viewBox="0 0 160 120" fill="none" aria-hidden="true">
+              <path d="M30 60 C30 35 55 20 80 60 C105 100 130 85 130 60 C130 35 105 20 80 60 C55 100 30 85 30 60 Z" stroke="rgba(255,255,255,0.22)" stroke-width="5" stroke-dasharray="2 4" stroke-linecap="round"/>
+              <path d="M35 60 C35 38 58 25 80 60 C102 95 125 82 125 60 C125 38 102 25 80 60 C58 95 35 82 35 60 Z" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="1 3"/>
+            </svg>
+
+            <div>
+              <div class="threat-card-top">
+                <span class="threat-badge">BIOMETRIC EVASION</span>
+                <div class="threat-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
+                    <path d="M12 6v6l4 2"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="threat-heading">Synthetic Biometric &amp; IVR Bypass</h3>
+              <p class="threat-text">
+                Injecting neural waveform audio into automated banking call centers to impersonate authorized account holders and circumvent legacy voiceprint matchers that fail to detect synthesis artifacts.
+              </p>
+            </div>
+            <div class="threat-stat-row">
+              <span class="threat-stat-big">92%</span>
+              <span class="threat-stat-label">Traditional IVR voice biometrics bypass rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================ -->
+    <!-- SECTION 4: THE MULTI-LAYER DETECTION FRAMEWORK               -->
+    <!-- 4 Square Grid Left Free For Custom Content                   -->
+    <!-- ============================================================ -->
+    <section class="framework-section" id="framework">
+      <div class="container">
+        <div class="framework-header">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>ARCHITECTURE</span>
+          </div>
+          <h2 class="framework-title">THE MULTI-LAYER DETECTION FRAMEWORK</h2>
+          <p class="framework-desc">
+            Multi-tiered real-time defense infrastructure. The 4 square grid modules below are reserved for your customized technical specifications.
+          </p>
+        </div>
+
+        <div class="framework-four-grid">
+          <!-- Layer 01 Slot -->
+          <div class="framework-slot-card">
+            <div class="slot-corner-tl"></div>
+            <div class="slot-corner-tr"></div>
+            <div class="slot-corner-bl"></div>
+            <div class="slot-corner-br"></div>
+
+            <div class="slot-header">
+              <span class="slot-layer-badge">LAYER 01</span>
+              <span class="slot-status-indicator">[ READY FOR CONTENT ]</span>
+            </div>
+
+            <div class="slot-center-body">
+              <div class="slot-plus-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+              <h3 class="slot-prompt-title">Layer 01 Module</h3>
+              <p class="slot-prompt-sub">Leave this slot free for custom detection framework content</p>
+            </div>
+
+            <div class="slot-footer">
+              <span>INPUT: ACOUSTIC STREAM</span>
+              <span>SLOT #01</span>
+            </div>
+          </div>
+
+          <!-- Layer 02 Slot -->
+          <div class="framework-slot-card">
+            <div class="slot-corner-tl"></div>
+            <div class="slot-corner-tr"></div>
+            <div class="slot-corner-bl"></div>
+            <div class="slot-corner-br"></div>
+
+            <div class="slot-header">
+              <span class="slot-layer-badge">LAYER 02</span>
+              <span class="slot-status-indicator">[ READY FOR CONTENT ]</span>
+            </div>
+
+            <div class="slot-center-body">
+              <div class="slot-plus-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+              <h3 class="slot-prompt-title">Layer 02 Module</h3>
+              <p class="slot-prompt-sub">Leave this slot free for custom detection framework content</p>
+            </div>
+
+            <div class="slot-footer">
+              <span>NEURAL ARTIFACT PIPELINE</span>
+              <span>SLOT #02</span>
+            </div>
+          </div>
+
+          <!-- Layer 03 Slot -->
+          <div class="framework-slot-card">
+            <div class="slot-corner-tl"></div>
+            <div class="slot-corner-tr"></div>
+            <div class="slot-corner-bl"></div>
+            <div class="slot-corner-br"></div>
+
+            <div class="slot-header">
+              <span class="slot-layer-badge">LAYER 03</span>
+              <span class="slot-status-indicator">[ READY FOR CONTENT ]</span>
+            </div>
+
+            <div class="slot-center-body">
+              <div class="slot-plus-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+              <h3 class="slot-prompt-title">Layer 03 Module</h3>
+              <p class="slot-prompt-sub">Leave this slot free for custom detection framework content</p>
+            </div>
+
+            <div class="slot-footer">
+              <span>BIOLOGICAL ENTROPY CHECK</span>
+              <span>SLOT #03</span>
+            </div>
+          </div>
+
+          <!-- Layer 04 Slot -->
+          <div class="framework-slot-card">
+            <div class="slot-corner-tl"></div>
+            <div class="slot-corner-tr"></div>
+            <div class="slot-corner-bl"></div>
+            <div class="slot-corner-br"></div>
+
+            <div class="slot-header">
+              <span class="slot-layer-badge">LAYER 04</span>
+              <span class="slot-status-indicator">[ READY FOR CONTENT ]</span>
+            </div>
+
+            <div class="slot-center-body">
+              <div class="slot-plus-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+              <h3 class="slot-prompt-title">Layer 04 Module</h3>
+              <p class="slot-prompt-sub">Leave this slot free for custom detection framework content</p>
+            </div>
+
+            <div class="slot-footer">
+              <span>REAL-TIME MITIGATION / 2FA</span>
+              <span>SLOT #04</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ============================================================ -->
+  <!-- SECTION 5: MASSIVE BLURRY WHITE FOOTER (Image 5)             -->
+  <!-- "Infinite Loops" with infinity symbol & blurry white text    -->
+  <!-- ============================================================ -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <!-- Top Links Row -->
+      <div class="footer-top-row">
+        <div class="footer-brand-title">
+          <img src="assets/logo.svg" alt="Infinite Loop" style="height: 24px;">
+        </div>
+
+        <ul class="footer-nav-links">
+          <li><a href="#" class="footer-nav-link">Legal &amp; Privacy FAQ</a></li>
+          <li><a href="#" class="footer-nav-link">Cookie Settings</a></li>
+          <li><a href="#threats" class="footer-nav-link">Threat Intelligence</a></li>
+          <li><a href="#aura-matrix" class="footer-nav-link">AURA Documentation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-divider-line"></div>
+
+      <!-- Gigantic Blurry White Typography Title (Image 5 Style) -->
+      <div class="footer-giant-brand-wrap" aria-label="Infinite Loops Brand Banner">
+        <div class="footer-giant-title">
+          <span class="footer-infinity-symbol">∞</span>
+          <span>Infinite Loops</span>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright Row -->
+      <div class="footer-bottom-row">
+        <span>&copy; 2026 Infinite Loop. All rights reserved.</span>
+        <span>REAL-TIME VOICE CLONING DETECTION &amp; PREVENTION</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/infinity-canvas.js"></script>
+  <script src="scripts/aura-calculator.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

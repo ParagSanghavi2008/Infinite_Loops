@@ -1,0 +1,336 @@
+@import url('./variables.css');
+
+/* Section 2: Dual Showcase Grid (Image 2) */
+.models-section {
+  position: relative;
+  padding: 120px 0 100px;
+  background: radial-gradient(circle at 50% 20%, rgba(15, 23, 42, 0.4) 0%, transparent 70%);
+  border-top: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.models-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.models-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.models-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--text-bright);
+  max-width: 900px;
+  margin: 0 auto 16px;
+}
+
+.models-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Two-Column Grid */
+.models-grid-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 50px;
+}
+
+/* Card Common */
+.showcase-card {
+  position: relative;
+  background: #0b0d13;
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  transition: all var(--transition-smooth);
+}
+
+.showcase-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(0, 242, 254, 0.08);
+}
+
+/* Card 1: Interactive Voice Stream Interceptor */
+.card-interceptor-content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  height: 100%;
+}
+
+.interceptor-preview-box {
+  background: rgba(18, 22, 32, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(16px);
+}
+
+.interceptor-text {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+.interceptor-audio-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stream-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.stream-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.stream-item:hover, .stream-item.active {
+  background: rgba(0, 242, 254, 0.08);
+  border-color: rgba(0, 242, 254, 0.3);
+  transform: translateX(4px);
+}
+
+.stream-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stream-radio-indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--text-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stream-item.active .stream-radio-indicator {
+  border-color: var(--neon-cyan);
+}
+
+.stream-item.active .stream-radio-indicator::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--neon-cyan);
+  box-shadow: 0 0 8px var(--neon-cyan);
+}
+
+.stream-flag {
+  font-size: 1.1rem;
+}
+
+.stream-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-bright);
+}
+
+.stream-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stream-prob {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.stream-badge-verdict {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.verdict-fake {
+  background: rgba(255, 59, 92, 0.15);
+  border: 1px solid rgba(255, 59, 92, 0.3);
+  color: #ff3b5c;
+}
+
+.verdict-human {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981;
+}
+
+/* Card 2: Classical Statue Spectrogram & Live Mic */
+.card-scanner {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.statue-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.statue-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: contrast(1.1) brightness(0.9);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.showcase-card:hover .statue-img {
+  transform: scale(1.04);
+}
+
+.statue-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 13, 19, 0.2) 0%, rgba(11, 13, 19, 0.92) 85%);
+  z-index: 2;
+}
+
+.statue-badge-index {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 3;
+}
+
+.scanner-interactive-widget {
+  position: relative;
+  z-index: 4;
+  margin: 24px;
+  padding: 24px;
+  background: rgba(14, 17, 25, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.record-btn-trigger {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.record-btn-trigger::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px dashed rgba(0, 242, 254, 0.4);
+  animation: rotateDashed 12s linear infinite;
+}
+
+@keyframes rotateDashed {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.record-btn-trigger:hover, .record-btn-trigger.active {
+  background: var(--neon-cyan);
+  color: #000000;
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.6);
+}
+
+.record-btn-trigger.active {
+  animation: recordingPulse 1.2s infinite ease-in-out;
+}
+
+@keyframes recordingPulse {
+  0% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 59, 92, 0.6); background: #ff3b5c; }
+  50% { transform: scale(1.08); box-shadow: 0 0 35px rgba(255, 59, 92, 0.9); background: #ff3b5c; }
+  100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 59, 92, 0.6); background: #ff3b5c; }
+}
+
+.scanner-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-bright);
+}
+
+.scanner-canvas-live {
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.scanner-status-text {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+@media (max-width: 900px) {
+  .models-grid-two {
+    grid-template-columns: 1fr;
+  }
+}

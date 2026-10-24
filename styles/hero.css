@@ -1,0 +1,83 @@
+@import url('./variables.css');
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  overflow: hidden;
+  background: #08090c;
+}
+
+/* Background Particle Canvas - Centered and Stable */
+.hero-canvas-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#infinity-particles-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Giant Typography - Fits in Proper Manner (Overlapping the Gem Loop Naturally) */
+.hero-giant-typography {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(100px, 14vw, 200px); /* Seamless overlap with loop in middle */
+  user-select: none;
+  pointer-events: none;
+}
+
+.giant-text-row {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  background: linear-gradient(180deg, #ffffff 30%, rgba(200, 210, 225, 0.5) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.85);
+  white-space: nowrap;
+  max-width: 100%;
+  text-align: center;
+}
+
+.giant-text-top {
+  font-size: clamp(3.2rem, 8.8vw, 9.5rem);
+}
+
+.giant-text-bottom {
+  font-size: clamp(2.8rem, 7.5vw, 8.2rem);
+}
+
+@media (max-width: 768px) {
+  .hero-giant-typography {
+    gap: 80px;
+  }
+  .giant-text-top {
+    font-size: clamp(2.4rem, 11vw, 4.5rem);
+  }
+  .giant-text-bottom {
+    font-size: clamp(2.1rem, 9.5vw, 3.8rem);
+  }
+}
